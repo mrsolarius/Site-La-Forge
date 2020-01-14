@@ -1,0 +1,126 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9 mai 2019, 17:54:55
+    Author     : Louis
+*/
+
+.artcontain{
+    display: flex;
+    margin: 30px 0;
+}
+
+.ArtPhoto{
+height: 170px;
+object-fit: cover;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+transform: scale(1);
+transition: all 0.3s ease-in-out;
+
+}
+.ArtPhoto:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.ArtInfo{
+text-align: start;
+width: 50%;
+margin-left: 20px;
+}
+
+.artSubContain{
+    position: relative;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    display: flex;
+}
+
+.allcontant{
+    margin: 0 auto;
+    display: flex;
+    background-color: white;
+    padding-top: 0;
+}
+
+.AutreCat{
+    width: 18%;
+    margin-top: 90px;
+}
+
+.Note{
+    display: flow-root;
+}
+.mobiletitre{
+    display: none;
+}
+
+.desktoptitre{
+    display: block;
+}
+
+.stock{
+    top: 0;
+    margin: 0;
+}
+
+.prix{
+    margin: 0;
+}
+
+@media screen and (max-width: 850px){
+    .allcontant{
+        flex-wrap: wrap;
+    }
+    .AutreCat {
+        order: 2;
+        margin-top: 10px;
+        width: 100%;            
+    }
+    
+}
+
+@media screen and (max-width: 660px){
+    .catcaption{
+        width: 95%;
+    }
+    .artSubContain {
+        flex-wrap: wrap;
+    }
+    
+    .ArtInfo{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 0;
+    }
+    .Note{
+        width: fit-content;
+        margin: auto;
+    }
+    .ArtPhoto{
+        width: 100%;
+    }
+    .mobiletitre{
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    .desktoptitre{
+        display: none;
+    }
+    .stock{
+        float: left;
+        padding: 0 8px;
+    }
+    .button{
+        float: left;
+    }
+    .prix{
+        float: right;
+    }
+}

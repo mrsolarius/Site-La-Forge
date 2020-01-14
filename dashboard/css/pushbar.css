@@ -1,0 +1,225 @@
+.container{
+    margin-top: 60px;
+    padding: 15px;
+}
+
+#barTop {
+    top: 0;
+    height: 60px;
+    transition: padding-top 0.5s, padding-bottom 0.5s;
+    z-index: 500;
+}
+#barTop{
+    width: 100%;
+    margin: 0;
+    background-color: #347EB3;
+    left: 0;
+    position: fixed;
+}
+
+#tabTitle{
+    display: block;
+    float: right;
+    margin: 0;
+    color: #336d96;
+    margin-right: 15px;
+}
+#userInfo{
+    display: block;
+    width: 265px;
+    background-color: #25597e;
+    height: 100%;
+    float: left;
+}
+
+#icon{
+    display: inline-block;
+    width: 32px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+
+/* General styles for all menus */
+.pushmenu {
+        background: #1c1c2b;;
+	position: fixed;
+        overflow: hidden;
+}
+
+.pushmenu h3 {
+	color: #afdefa;
+	font-size: 1.9em;
+	padding: 20px;
+	margin: 0;
+	font-weight: 300;
+	background: #0d77b6;
+}
+
+.pushmenu a {
+	display: block;
+	color: #77788c;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.pushmenu a:hover {
+	background: #1a1a26;
+        color: white;
+}
+
+.pushmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.pushmenu-vertical {
+	width: 265px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+        margin-top: 60px;
+}
+
+.pushmenu-vertical a {
+	padding: 1em;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.pushmenu-left {
+	left: -265px;
+}
+
+.pushmenu-left.pushmenu-open {
+	left: 0px;
+        margin-top: 60px;
+}
+
+/* Push classes applied to the body */
+
+.pushmenu-push {
+	position: relative;
+	left: 0;
+}
+
+.pushmenu-push-toright {
+	margin-left: 265px;
+}
+
+.pushmenu-push-toleft {
+	margin-left: 0px;
+}
+
+/* Transitions */
+
+.pushmenu,
+.pushmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.icon{
+  background-color: #ffffff00 !important;
+}
+.icon:hover{
+  background-color: #ffffff00 !important;
+}
+
+#nav-icon {
+  margin: 8px;
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon.open span{
+    background: white;
+}
+#nav-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
+
+.downmenu{
+    bottom: 0;
+}
+
+@media screen and (max-width:450px){
+    #tabTitle{
+        display: none;
+    }
+}

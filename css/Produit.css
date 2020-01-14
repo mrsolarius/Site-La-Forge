@@ -1,0 +1,162 @@
+/*Time for the CSS*/
+* {margin: 0; padding: 0;}
+body {background: #ccc;}
+
+.slider{
+    width: 90%; /*Same as width of the large image*/
+    position: relative;
+    /*Instead of height we will use padding*/
+    padding-top: 320px; /*That helps bring the labels down*/
+
+    margin: 100px auto;
+
+    /*Lets add a shadow*/
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+    border: 3px solid #999;
+
+    float: left;
+    transition: all 0.5s;
+
+    /*Default style = low opacity*/
+    opacity: 0.6;
+}
+
+.slider label img{
+    display: block;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
+
+/*We are done :)*/
+
+.articleConteneur{
+    max-width: 1200px;
+    padding: 8%;
+    padding-top: 8%;
+    display: flex;
+    background-color: white;
+    padding-top: 4%;
+    margin: auto;
+}
+
+.colonededroite{
+    width: 65%;
+    position: relative;
+    transform: translateY(-65px);
+}
+
+.colonedegauche{
+    width: 35%;
+}
+
+h1{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 40px "Lato", sans-serif;
+    font-weight: normal;
+    color: #111;
+    font-weight: bold;
+}
+
+h3{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #777;
+}
+
+.fa{
+    color: #ccc;
+}
+
+.checked{
+    color: #5383d3;
+}
+
+.button {
+
+    background-color: transparent;
+    border: none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    line-height: 36px;
+    min-width: 64px;
+    padding: 0 8px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.modifier:hover {
+
+    background-color: #0074D9 !important;
+    color: white;
+    transition: all 0.3s ease-in-out;
+
+}
+.tile{
+    display: block;
+}
+.tile1{
+    display:none;
+}
+@media screen and (max-width: 1024px){
+    .colonededroite, .colonedegauche{
+        width: 100%;
+    }
+    .articleConteneur {
+        flex-wrap: wrap;
+    }
+    .tile{
+        display: none;
+    }
+    .tile1{
+        display:block;
+    }
+}

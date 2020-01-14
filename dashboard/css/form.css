@@ -1,0 +1,227 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: translateY(-5px);
+  left: 35%;
+}
+
+/* Hide the browser's default checkbox */
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #444;
+  transition: all .3s ease-out;
+}
+
+/* On mouse-over, add a grey background color */
+.check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+  transition: all .3s ease-out;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked ~ .checkmark {
+  background-color: #2D7CB7;
+  transition: all .3s ease-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  transition: all .3s ease-out;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all .3s ease-out;
+}
+
+.modalpanel{
+    color: #ddd
+}
+
+.modalpanel h1, .modalpanel h2, .modalpanel h3 {
+    font-family: "Segoe UI Light", "Segoe UI", Calibri, Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-weight: lighter;
+    
+}
+
+.modalpanel h1{
+    font-size: 65px;
+    color: #2d7cb7;
+    font-weight: bold;
+}
+
+.modalpanel .removablefiled{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modalpanel .container {
+  padding: 16px;
+  background-color: white;
+}
+
+
+.modalpanel input, .modalpanel textarea, .modalpanel select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: block;
+  border: none;
+  background: #444;
+  transition: all 0.5s ease;
+  color: #ddd;
+}
+
+.modalpanel input:focus, .modalpanel textarea:focus, .modalpanel select:focus{
+  background-color: #ddd;
+  outline: none;
+  transition: all 0.5s ease;
+  color: #444;
+}
+
+
+.modalpanel hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.modalpanel .registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.modalpanel .registerbtn:hover {
+  opacity: 1;
+}
+
+
+.modalpanel a {
+  color: dodgerblue;
+}
+
+
+.modalpanel .signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.modalpanel .container{
+    width: 600px;
+    margin: auto;
+}
+
+.inline-input{
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin: 5px 0 22px 0;
+}
+
+.inline-radio {
+  display: flex;
+  overflow: hidden;
+  width: 20%;
+  margin: 5px 0 22px 0;
+}
+
+.inline-radio div {
+  position: relative;
+  flex: 1;
+}
+.inline-radio input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.inline-radio label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #b6b6b6;
+  width: 100%;
+  height: 100%;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  
+  transition: all 0.5s ease;
+}
+.inline-radio div:last-child label {
+  border-right: 0;
+}
+.inline-radio input:checked + label {
+  background: #2d7cb7;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 700px) {
+    .modalpanel .container{
+        width: 80%;
+    }
+    .modalpanel #ConteurNom{
+        display: block;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .modalpanel #ConteurPrenom{
+        display: block;
+        padding-right: 0px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,197 @@
+.primary-text {
+	font-size: 24px;
+}
+.primary-text + .secondary-text, .secondary-text + .primary-text, .optional-header + .primary-text {
+	margin-top: calc(24px/2/2); /* margin-top is 50% of the primary title font size. */
+}
+
+.title, .primary-text {
+	line-height: 1.2;
+}
+
+.media .optional-header .primary-title {
+	background-image: none;
+	width: auto;
+}
+.media .primary-title {
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.46));
+	bottom: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 16px 16px 24px;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.optional-header .primary-title {
+	bottom: auto;
+	display: inline-block;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	-moz-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+.primary-title {
+	padding: 24px 16px 16px;
+}
+.float-left {
+	float: left!important;
+}
+.float-right {
+	float: right!important;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    line-height: 36px;
+    min-width: 64px;
+    padding: 0 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.articleConteneur {
+    max-width: 1200px;
+    padding: 8%;
+        padding-top: 8%;
+    padding-top: 8%;
+    display: flex;
+    background-color: white;
+    padding-top: 4%;
+    margin: auto;
+}
+
+html{
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #5383d3;
+    font-weight: 400;
+    font-style: italic;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    transition: all 0.3s ease-in-out;
+    font-weight: 900;
+}
+
+.modifier:hover {
+    background-color: #0074D9 !important;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+#titre{
+   background-color: #ffffff00;
+   color: white;
+}
+
+.page{
+    padding: 50px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+  overflow-x: hidden;
+}
+
+.cookie-alert {
+    padding: 40px;
+    padding-top: 0;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: #8ba4a4e6;
+    color: white;
+    width: 100%;
+    line-height: 1;
+    font-style: normal;
+}
+
+.contenucookie{
+    width: 70%;
+}
+
+.cookie-alert .button {
+    margin: auto ;
+    transform: translateY(20px);
+}
+
+.cookie-alert .caption{
+    z-index: 1;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    position: relative;
+    left: -10vw;
+    top: -30px;
+
+}
+
+.cookie-alert .caption span.border{
+    background-color: #4d4d4d;
+}
+
+.caption {
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+
+}
+
+.caption span.border {
+
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+
+}
+.caption {
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .page{
+        padding: 0px;
+        margin-top: 75px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .contenucookie {
+        width: 100%;
+    }
+    .cookie-alert {
+        flex-wrap: wrap;
+    }
+    .cookie-alert{
+        line-height: 2;
+    }
+}
