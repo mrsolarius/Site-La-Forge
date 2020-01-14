@@ -1,31 +1,279 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 26 mars 2019, 14:39:38
-    Author     : UTI105
-*/
+#titre {
 
-nav ul{
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    background-color: #FF8A04;
+    background-color: #ffffff00;
+    color: white;
+    color: #ffffff;
+    font: normal 28px 'Cookie', cursive;
+    margin: -1px;
+    text-transform: initial;
+
 }
 
-nav li{
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    margin: 0px;
-    padding: 0px;
-    border-right: 1px solid #003840;
-    text-align: center;
-    line-height: 40px;
+#titre span{
+    color: #5383d3;
 }
 
-nav li a{
-    text-decoration: none;
+.dropbtn a {
+    margin: -1px !important;
+    padding: 0 !important;
+    margin-right: 10px !important;
+}
+
+.dropdown:hover .dropbtn a{
+    transition: all 0.3s ease-in-out;
+    color: black;
+    font-weight: 900;
+}
+
+.drop ul {
+    position: absolute;
+    left: 0;
+    top: 3em;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+#titre{
+   background-color: #ffffff00;
+   color: white
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #282e34;
+  border-bottom: 5px solid #5383d3;
+  z-index: 10;
+  position: fixed;
+  top : 0;
+  width: 100% !important;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover , .dropdown:hover .dropbtn{
+  background-color: #ddd;
+  color: black;
+}
+
+#disconect:hover{
+    background-color:red !important;
+    color: white !important;
+}
+
+.active {
+  background-color: #5383d3;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 19.5px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@media screen and (max-width: 760px){
+    #titre{
+        display : none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child),.dropdown{
+      display: none;
+  }
+  
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  #titre{
+        display : block;
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #titre{
+        font-size: 35px !important;
+    }
+        
+}
+
+@media screen and (max-width: 600px) {
+    
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,.responsive .dropdown{
+    float: none !important;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a,.dropdown button{
+      font-size: 1.5em !important;
+  }
+  
+  .dropdown button{
+      width: 100%;
+      text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: contents;
+  }
+  .dropdown-content a{
+      color: white !important;
+  }
+  .dropdown-content a:hover{
+      color: black !important;
+  }
+}
+
+/*animation navbar*/
+
+.icon{
+  background-color: #ffffff00 !important;
+}
+.icon:hover{
+  background-color: #ffffff00 !important;
+}
+
+#nav-icon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon.open span{
+    background: white;
+}
+#nav-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
 }
